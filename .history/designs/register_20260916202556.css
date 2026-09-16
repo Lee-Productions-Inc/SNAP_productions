@@ -1,0 +1,178 @@
+:root {
+	font-family: Arial, sans-serif;
+	color: #111827;
+	background: #e8f5ff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+}
+
+.register-page {
+	display: grid;
+	grid-template-columns: 42% 58%;
+	min-height: 100vh;
+	background: linear-gradient(90deg, #f8fcff 0%, #edf8ff 41%, #e1f2fd 68%, #c5e3fb 100%);
+}
+
+.register-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: clamp(54px, 8vh, 78px) 24px 30px;
+}
+
+.register-header {
+	text-align: center;
+}
+
+.register-header h1 {
+	margin: 0;
+	font-size: clamp(25px, 2.25vw, 32px);
+	line-height: 1.1;
+}
+
+.register-header p {
+	margin: 6px 0 25px;
+	color: #7c8795;
+	font-size: 12px;
+}
+
+.register-card {
+	width: min(100%, 360px);
+	padding: 14px 28px 17px;
+	border-radius: 11px;
+	background: #fff;
+	box-shadow: 0 7px 18px rgba(75, 115, 145, 0.16);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+input,
+button {
+	width: 100%;
+	min-height: 39px;
+	border: 1px solid #e2e7ed;
+	border-radius: 8px;
+	font: inherit;
+}
+
+input:not([type="checkbox"]) {
+	padding: 0 12px;
+	color: #111827;
+	font-size: 11px;
+}
+
+input::placeholder {
+	color: #7c8795;
+}
+
+.terms-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 7px;
+	margin: 2px 0 1px;
+	color: #7c8795;
+	font-size: 9px;
+	line-height: 1.35;
+}
+
+.terms-row input {
+	width: 13px;
+	min-width: 13px;
+	height: 13px;
+	min-height: 13px;
+	margin: 0;
+	accent-color: #102cff;
+}
+
+a {
+	color: #1345e8;
+	font-weight: 700;
+}
+
+button {
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 700;
+}
+
+.register-button {
+	min-height: 42px;
+	border-color: #102cff;
+	color: #fff;
+	background: #102cff;
+}
+
+.login-copy {
+	margin: 12px 0 0;
+	color: #8a919c;
+	font-size: 10px;
+	text-align: center;
+}
+
+.login-copy a {
+	text-decoration: none;
+}
+
+.brand-panel {
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+
+.logo-crop {
+	position: relative;
+	width: min(72vw, 700px);
+	height: min(34vw, 360px);
+	overflow: hidden;
+}
+
+.logo-crop img {
+	position: absolute;
+	width: 1040px;
+	max-width: none;
+	height: auto;
+	left: -240px;
+	top: -180px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+@media (max-width: 700px) {
+	.register-page {
+		grid-template-columns: 1fr;
+	}
+
+	.register-panel {
+		padding-top: 54px;
+	}
+
+	.brand-panel {
+		min-height: 260px;
+	}
+
+	.logo-crop {
+		width: 100vw;
+		height: 260px;
+	}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SNAP</title>
+    <link rel="stylesheet" href="../designs/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-shell">
+        <aside class="sidebar" aria-label="Main navigation">
+            <a class="brand" href="dashboard.html" aria-label="SNAP home">SNAP</a>
+
+            <nav class="primary-nav">
+                <a class="nav-item active" href="dashboard.html"><span aria-hidden="true">⌂</span>Home</a>
+                <a class="nav-item" href="#tasks"><span aria-hidden="true">✓</span>Tasks</a>
+                <a class="nav-item" href="#ai-chat"><span aria-hidden="true">◌</span>AI Chat</a>
+                <a class="nav-item" href="#badge"><span aria-hidden="true">◇</span>Badge</a>
+                <a class="nav-item" href="#profile"><span aria-hidden="true">○</span>Profile</a>
+            </nav>
+
+            <div class="recent-notes">
+                <h2>Recent Notes</h2>
+                <div class="empty-recent" aria-hidden="true"></div>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div>
+                    <p class="eyebrow">Overview</p>
+                    <h1>Good morning</h1>
+                </div>
+                <div class="header-actions">
+                    <a class="text-action" href="#new-note">New note</a>
+                    <a class="text-action" href="#all-notes">All notes</a>
+                    <a class="text-action" href="#folders">Folders</a>
+                    <button class="profile-placeholder" type="button" aria-label="Open profile"></button>
+                </div>
+            </header>
+
+            <section class="status-grid" aria-label="Task status">
+                <article class="status-card today-card">
+                    <span class="status-label">Today</span>
+                    <strong class="status-count" aria-label="No count yet"></strong>
+                </article>
+                <article class="status-card progress-card">
+                    <span class="status-label">In Progress</span>
+                    <strong class="status-count" aria-label="No count yet"></strong>
+                </article>
+                <article class="status-card completed-card">
+                    <span class="status-label">Completed</span>
+                    <strong class="status-count" aria-label="No count yet"></strong>
+                </article>
+            </section>
+
+            <section class="notes-section" aria-labelledby="notes-title">
+                <div class="section-heading">
+                    <h2 id="notes-title">Notes</h2>
+                    <button class="icon-button" type="button" aria-label="Add note">+</button>
+                </div>
+                <div class="notes-grid">
+                    <button class="note-placeholder" type="button" aria-label="Empty note placeholder"></button>
+                    <button class="note-placeholder" type="button" aria-label="Empty note placeholder"></button>
+                    <button class="note-placeholder" type="button" aria-label="Empty note placeholder"></button>
+                    <button class="note-placeholder" type="button" aria-label="Empty note placeholder"></button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

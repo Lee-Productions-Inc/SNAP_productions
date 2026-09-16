@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | SNAP</title>
+    <link rel="stylesheet" href="../designs/main.css">
+</head>
+<body>
+    <main class="login-page">
+        <section class="login-panel" aria-labelledby="welcome-title">
+            <header class="welcome-header">
+                <h1 id="welcome-title">Welcome to SNAP</h1>
+                <p>Learn <strong>smarter.</strong> Write <strong>better.</strong></p>
+                <br>
+            </header>
+
+            <section class="login-card" aria-labelledby="login-title">
+                <h2 id="login-title">Log In</h2>
+                <form action="/login" method="POST">
+                    <label class="sr-only" for="username">Email or username</label>
+                    <input type="text" id="username" name="username" placeholder="Email/Username" autocomplete="username" required>
+
+                    <label class="sr-only" for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required>
+
+                    <button class="primary-button" type="submit" onClick="window.location.href">Log In</button>
+                    <a class="forgot-link" href="/forgot-password">Forgot Password?</a>
+
+                    <div class="divider"><span>Or continue with</span></div>
+
+                    <button class="social-button" type="button" onclick="window.location.href='/login/google'">
+                        <span class="google-icon" aria-hidden="true">G</span>Google
+                    </button>
+                    <button class="social-button" type="button" onclick="window.location.href='/login/facebook'">
+                        <span class="facebook-icon" aria-hidden="true">F</span>Facebook
+                    </button>
+                </form>
+                <p class="signup-copy">Don't have an account? <a href="register.html">Sign Up</a></p>
+            </section>
+        </section>
+
+        <section class="brand-panel" aria-label="SNAP branding">
+            <div class="logo-crop">
+                <img src="../assets/Copilot_20260907_145330.png" alt="SNAP">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
