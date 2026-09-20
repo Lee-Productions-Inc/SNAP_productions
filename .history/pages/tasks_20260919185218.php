@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks | SNAP</title>
+</head>
+<body>
+    <div class="dashboard-shell profile-page">
+            <aside class="sidebar" aria-label="Main navigation">
+                <a class="brand" href="dashboard.html" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <span>
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </span>
+                </a>
+                <nav class="primary-nav">
+                    <a class="nav-item" href="dashboard.html"><img class="nav-icon" src="../assets/Vector.svg" alt="">Home
+                    </a>
+                    <a class="nav-item" href="#tasks"><img class="nav-icon" src="../assets/check-square.svg" alt="">Tasks
+                    </a>
+                    <a class="nav-item" href="#ai-chat"><img class="nav-icon" src="../assets/message-circle.svg" alt="">AI Chat
+                    </a>
+                    <a class="nav-item" href="#badge"><img class="nav-icon" src="../assets/badge-check.svg" alt="">Badge
+                    </a>
+                    <a class="nav-item active" href="profile.html"><img class="nav-icon-active" src="../assets/user.svg" alt="">Profile
+                    </a>
+                </nav>
+
+                </aside>
+            
+        </div>
+</body>
+</html>

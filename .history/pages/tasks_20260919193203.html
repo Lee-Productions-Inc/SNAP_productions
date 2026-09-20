@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Tasks | SNAP</title>
+        <link rel="stylesheet" href="../designs/tasks.css">
+    </head>
+    <body>
+        <div class="dashboard-shell">
+            <aside class="sidebar" aria-label="Main navigation">
+                <a class="brand" href="dashboard.html" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <span>
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </span>
+                </a>
+
+                <nav class="primary-nav">
+                    <a class="nav-item" href="dashboard.html">
+                        <img class="nav-icon" src="../assets/Vector.svg" alt="">
+                        Home
+                    </a>
+                    <a class="nav-item active" href="tasks.html">
+                        <img class="nav-icon" src="../assets/check-square.svg" alt="">
+                        Tasks
+                    </a>
+                    <a class="nav-item" href="#ai-chat">
+                        <img class="nav-icon" src="../assets/message-circle.svg" alt="">
+                        AI Chat
+                    </a>
+                    <a class="nav-item" href="#badge">
+                        <img class="nav-icon" src="../assets/badge-check.svg" alt="">
+                        Badge
+                    </a>
+                    <a class="nav-item" href="profile.html">
+                        <img class="nav-icon-active" src="../assets/user.svg" alt="">
+                        Profile
+                    </a>
+                </nav>
+                <div class="recent-notes">
+                    <h2>Recent Notes</h2>
+                    <div class="empty-recent" aria-hidden="true"></div>
+                </div>
+            </aside>
+
+            <main class="tasks-main">
+                <header class="tasks-header">
+                    <label class="search-box" aria-label="Search tasks">
+                        <span aria-hidden="true">⌕</span>
+                        <input type="search" placeholder="Search tasks..." aria-label="Search tasks">
+                    </label>
+                    <button class="new-task-button" type="button">New task</button>
+                </header>
+
+                <section class="task-board" aria-label="Task board">
+                    <div class="task-board-header">
+                        <h1>My Tasks</h1>
+                        <div class="task-filter-list" aria-label="Task categories">
+                        </div>
+                    </div>
+
+                    <div class="task-group">
+                        <div class="empty-task-grid">
+                            <div class="task-card empty-card" aria-hidden="true"></div>
+                            <div class="task-card empty-card" aria-hidden="true"></div>
+                            <div class="task-card empty-card" aria-hidden="true"></div>
+                        </div>
+                    </div>
+
+                    <div class="task-group">
+                        <h2>Overdue</h2>
+                        <div class="empty-task-grid two-column">
+                            <div class="task-card empty-card" aria-hidden="true"></div>
+                        </div>
+                    </div>
+
+                    <div class="task-group">
+                        <h2>Completed</h2>
+                        <div class="empty-task-grid single-column">
+                            <div class="task-card empty-card" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
