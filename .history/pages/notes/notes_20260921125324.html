@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notes | SNAP</title>
+        <link rel="stylesheet" href="../../designs/notes.css">
+    </head>
+    <body>
+        <div class="app-shell">
+            <aside class="sidebar" aria-label="Main navigation">
+                <div class="brand" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <div class="brand-copy">
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </div>
+                </div>
+
+                <nav class="primary-nav" aria-label="Primary navigation">
+                    <a class="nav-item" href="../dashboard.html">
+                        <span class="nav-icon home-icon" aria-hidden="true"></span>
+                        <span>Home</span>
+                    </a>
+                    <a class="nav-item" href="../tasks.html">
+                        <span class="nav-icon tasks-icon" aria-hidden="true"></span>
+                        <span>Tasks</span>
+                    </a>
+                    <a class="nav-item" href="../ai_chat.html">
+                        <span class="nav-icon ai-icon" aria-hidden="true"></span>
+                        <span>AI Chat</span>
+                    </a>
+                    <a class="nav-item" href="../badges.html">
+                        <span class="nav-icon badge-icon" aria-hidden="true"></span>
+                        <span>Badge</span>
+                    </a>
+                    <a class="nav-item" href="../profile.html">
+                        <span class="nav-icon profile-icon" aria-hidden="true"></span>
+                        <span>Profile</span>
+                    </a>
+                </nav>
+
+                <div class="recent-panel">
+                    <div class="recent-header">
+                        <span>Recent Notes</span>
+                        <a href="../dashboard.html">See all</a>
+                    </div>
+
+                    <div class="recent-notes" aria-label="Recent notes">
+                        <div class="note-item">
+                            <span class="note-icon" aria-hidden="true">▣</span>
+                            <div class="note-copy">
+                                <strong>Data Structure Key</strong>
+                                <small>Updated 2h ago</small>
+                            </div>
+                        </div>
+
+                        <div class="note-item">
+                            <span class="note-icon" aria-hidden="true">▣</span>
+                            <div class="note-copy">
+                                <strong>Lesson Summary in Info...</strong>
+                                <small>Updated yesterday</small>
+                            </div>
+                        </div>
+
+                        <div class="note-item">
+                            <span class="note-icon" aria-hidden="true">▣</span>
+                            <div class="note-copy">
+                                <strong>Design System Tokens</strong>
+                                <small>Updated 2w ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="notes-panel">
+                <header class="editor-header">
+                    <button class="icon-button back-button" type="button" aria-label="Go back">‹</button>
+
+                    <div class="title-block">
+                        <div class="title-row">
+                            <input type="text" value="Input Title" aria-label="Note title">
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item">September 9</span>
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item">2:04 PM</span>
+                            <span class="meta-separator">•</span>
+                            <span class="meta-item">0 words</span>
+                        </div>
+                    </div>
+
+                    <div class="header-actions">
+                        <button class="action-button save-button" type="button">Save</button>
+                        <button class="action-button ghost-button" type="button">New note</button>
+                        <button class="action-button ghost-button muted-button" type="button">All notes</button>
+                        <button class="avatar-button" type="button" aria-label="User profile"></button>
+                    </div>
+                </header>
+
+                <section class="editor-surface" aria-label="Note editor">
+                    <div class="toolbar" aria-label="Formatting toolbar">
+                        <div class="toolbar-group">
+                            <button class="tool-button bold" type="button">B</button>
+                            <button class="tool-button italic" type="button">I</button>
+                            <button class="tool-button underline" type="button">U</button>
+                            <button class="tool-button strike" type="button">S</button>
+                        </div>
+
+                        <div class="toolbar-group compact-group">
+                            <button class="tool-button small" type="button">Inter</button>
+                            <button class="tool-button small" type="button">14</button>
+                            <button class="tool-button small" type="button">1.5</button>
+                            <button class="tool-button small" type="button">—</button>
+                            <button class="tool-button small" type="button">100%</button>
+                            <button class="tool-button small" type="button">+</button>
+                            <button class="tool-button small" type="button">−</button>
+                            <button class="tool-button small" type="button">⟲</button>
+                            <button class="tool-button small" type="button">⋯</button>
+                        </div>
+                    </div>
+
+                    <div class="editor-body">
+                        <div class="draft-status">
+                            <span class="status-badge">Draft</span>
+                            <span class="status-text">• Autosaved</span>
+                            <span class="word-total">0 words</span>
+                        </div>
+
+                        <div class="editor-placeholder" aria-label="Write your note">Start writing your note...</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
