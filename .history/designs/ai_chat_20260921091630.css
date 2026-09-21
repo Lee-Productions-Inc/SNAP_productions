@@ -245,7 +245,7 @@ img {
     letter-spacing: -0.05em;
     text-align: left;
     line-height: 1.18;
-    padding: 22px 0 0;
+    padding: 22px 0 18px;
 }
 
 .chat-input-row {

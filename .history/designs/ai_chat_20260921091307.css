@@ -50,7 +50,7 @@ img {
     flex: 0 0 177px;
     flex-direction: column;
     min-height: 100vh;
-    padding: 9px 10px 16px;
+    padding: 9px 10px 20px;
     border-right: 1px solid rgba(136, 183, 219, 0.24);
     background: rgba(248, 252, 255, 0.78);
 }
@@ -191,7 +191,7 @@ img {
     flex-direction: column;
     min-height: 100vh;
     padding: 0 0 18px;
-    background: rgba(239, 246, 252, 0.38);
+    background: rgba(239, 246, 252, 0.7);
 }
 
 .top-bar {

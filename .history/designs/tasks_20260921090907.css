@@ -129,10 +129,6 @@ a {
     filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(1800%) hue-rotate(205deg) brightness(97%) contrast(97%);
 }
 
-.nav-item:hover:not(.active) {
-    color: #5f6f84;
-    background: rgba(224, 239, 255, 0.35);
-}
 
 .recent-notes {
     margin-top: 18px;
