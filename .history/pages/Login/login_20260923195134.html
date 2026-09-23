@@ -22,7 +22,7 @@
             </header>
 
             <section class="login-card" aria-labelledby="login-title">
-                <h2 class="login-title">Log In</h2>
+                <h2 id="login-title">Log In</h2>
                 <form action="/login" method="POST">
                     <label class="sr-only" for="username">Email or username</label>
                     <input type="text" id="username" name="username" placeholder="Email/Username" autocomplete="username" required>
@@ -31,7 +31,7 @@
                     <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required>
 
                     <button class="primary-button" type="submit" onClick="window.location.href='../dashboard/dashboard.html'">Log In</button>
-                    <a class="forgot-link" href="forgot_password.html">Forgot Password?</a>
+                    <a class="forgot-link" href="#">Forgot Password?</a>
 
                     <div class="divider"><span>Or continue with</span></div>
 

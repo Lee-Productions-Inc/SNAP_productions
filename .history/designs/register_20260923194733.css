@@ -16,7 +16,7 @@ body {
 
 .register-page {
 	display: grid;
-	grid-template-columns: 62% 38%;
+	grid-template-columns: 58% 42%;
 	min-height: 100vh;
 	background: linear-gradient(90deg, #f8fcff 0%, #edf8ff 41%, #e1f2fd 68%, #c5e3fb 100%);
 }
@@ -40,19 +40,19 @@ body {
 
 .register-header h1 {
 	margin: 0;
-	font-size: clamp(28px, 2.6vw, 36px);
+	font-size: clamp(25px, 2.25vw, 32px);
 	line-height: 1.1;
 }
 
 .register-header p {
 	margin: 6px 0 25px;
 	color: #7c8795;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .register-card {
-	width: min(100%, 460px);
-	padding: 18px 32px 20px;
+	width: min(100%, 440px);
+	padding: 16px 30px 18px;
 	border-radius: 14px;
 	background: #fff;
 	box-shadow: 0 10px 24px rgba(75, 115, 145, 0.16);
@@ -76,7 +76,7 @@ button {
 input:not([type="checkbox"]) {
 	padding: 0 12px;
 	color: #111827;
-	font-size: 14px;
+	font-size: 11px;
 }
 
 input::placeholder {
@@ -89,7 +89,7 @@ input::placeholder {
 	gap: 7px;
 	margin: 2px 0 1px;
 	color: #7c8795;
-	font-size: 11px;
+	font-size: 9px;
 	line-height: 1.35;
 }
 
@@ -109,7 +109,7 @@ a {
 
 button {
 	cursor: pointer;
-	font-size: 14px;
+	font-size: 11px;
 	font-weight: 700;
 }
 
@@ -123,7 +123,7 @@ button {
 .login-copy {
 	margin: 12px 0 0;
 	color: #8a919c;
-	font-size: 12px;
+	font-size: 10px;
 	text-align: center;
 }
 
