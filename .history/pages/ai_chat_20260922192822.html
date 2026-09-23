@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI Chat | SNAP</title>
+        <link rel="stylesheet" href="../designs/ai_chat.css">
+    </head>
+    <body>
+        <div class="dashboard-shell">
+            <aside class="sidebar" aria-label="Main navigation">
+                <a class="brand" href="dashboard.html" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <span>
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </span>
+                </a>
+
+                <nav class="primary-nav">
+                    <a class="nav-item" href="../pages/dashboard/dashboard.html">
+                        <img class="nav-icon" src="../assets/main icons/Vector.svg" alt="Home icon">
+                        Home
+                    </a>
+                    <a class="nav-item" href="tasks.html">
+                        <img class="nav-icon" src="../assets/main icons/check-square.svg" alt="Tasks icon">
+                        Tasks
+                    </a>
+                    <a class="nav-item active" href="ai_chat.html">
+                        <img class="nav-icon-active" src="../assets/main icons/message-circle.svg" alt="AI chat icon">
+                        AI Chat
+                    </a>
+                    <a class="nav-item" href="badges.html">
+                        <img class="nav-icon" src="../assets/main icons/badge-check.svg" alt="Badge icon">
+                        Badge
+                    </a>
+                    <a class="nav-item" href="profile.html">
+                        <img class="nav-icon" src="../assets/main icons/user.svg" alt="Profile icon">
+                        Profile
+                    </a>
+                </nav>
+
+                <div class="chat-utils">
+                    <button class="new-chat-button" type="button">+ New Chat</button>
+                    <button class="library-button" type="button">Library</button>
+                </div>
+
+                <div class="recent-chat" aria-label="Recent chat">
+                    <h2>Recent Chat</h2>
+                    <div class="empty-chat-state" aria-hidden="true"></div>
+                </div>
+            </aside>
+
+
+
+
+            
+            <main class="ai-chat-panel" aria-label="AI chat panel">
+                <div class="top-bar">
+                    <div class="avatar" aria-label="User profile"></div>
+                </div>
+
+                <div class="chat-surface">
+                    <div class="chat-message" aria-label="AI start message">
+                        Hi! User, what's on your mind today?
+                    </div>
+
+                    <div class="chat-input-row">
+                        <div class="message-input-wrap">
+                            <span class="input-icon" aria-hidden="true">◌</span>
+                            <input type="text" placeholder="Message Alice..." aria-label="Message Alice">
+                        </div>
+                        <button type="button" class="send-button">Send</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

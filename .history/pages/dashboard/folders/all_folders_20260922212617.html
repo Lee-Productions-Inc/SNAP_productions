@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All Folders | SNAP</title>
+        <link rel="stylesheet" href="../../designs/dashboard.css"> 
+        <link rel="stylesheet" href="../../designs/all_folders.css">
+    </head>
+    <body>
+        <div class="dashboard-shell">
+            <aside class="sidebar" aria-label="Main navigation">
+                <a class="brand" href="../dashboard.html" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <span>
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </span>
+                </a>
+
+                <nav class="primary-nav">
+                    <a class="nav-item" href="../dashboard.html">
+                        <img class="nav-icon" src="../../../assets/main icons/Vector.svg" alt="Home icon">
+                        Home
+                    </a>
+                    <a class="nav-item" href="../../tasks.html">
+                        <img class="nav-icon" src="../../../assets/main icons/check-square.svg" alt="Tasks icon">
+                        Tasks
+                    </a>
+                    <a class="nav-item" href="../../ai_chat.html">
+                        <img class="nav-icon" src="../../../assets/main icons/message-circle.svg" alt="AI chat icon">
+                        AI Chat
+                    </a>
+                    <a class="nav-item" href="../../badges.html">
+                        <img class="nav-icon" src="../../../assets/main icons/badge-check.svg" alt="Badge icon">
+                        Badge
+                    </a>
+                    <a class="nav-item" href="../../profile.html">
+                        <img class="nav-icon" src="../../../assets/main icons/user.svg" alt="Profile icon">
+                        Profile
+                    </a>
+                </nav>
+
+                <div class="recent-notes">
+                    <h2>Recent Notes</h2>
+                    <div class="note-list">
+                        <a class="note-item" href="#">
+                            <span class="note-icon">✎</span>
+                            <span>
+                                <strong>Data Structure Key notes</strong>
+                                <small>Updated 2h ago</small>
+                            </span>
+                        </a>
+                        <a class="note-item" href="#">
+                            <span class="note-icon">✎</span>
+                            <span>
+                                <strong>Lesson Summary Info...</strong>
+                                <small>Updated yesterday</small>
+                            </span>
+                        </a>
+                        <a class="note-item" href="#">
+                            <span class="note-icon">✎</span>
+                            <span>
+                                <strong>Design System Tokens</strong>
+                                <small>Updated 1w ago</small>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="folders-main">
+                <header class="folders-header">
+                    <label class="search-box" aria-label="Search notes and tasks">
+                        <span aria-hidden="true">⌕</span>
+                        <input type="search" placeholder="Search notes, tasks..." aria-label="Search notes and tasks">
+                    </label>
+
+                    <div class="header-actions">
+                        <button class="new-folder-button" type="button">New Folder</button>
+                        <a class="text-action" href="../dashboard.html">All notes</a>
+                        <a class="text-action folder-action selected-folder" href="all_folders.html">
+                            <img class="text-action-icon" src="../../../assets/folder.svg" alt="Folder icon">
+                            Folders
+                        </a>
+                        <button class="profile-placeholder" type="button" aria-label="Open profile"></button>
+                    </div>
+                </header>
+
+                <section class="folders-panel" aria-label="Folders area">
+                    <div class="folders-title-row">
+                        <h1>Folders</h1>
+                        <button class="edit-button" type="button">Edit</button>
+                    </div>
+
+                    <div class="folder-cards" aria-label="Folder list">
+                        <a class="folder-card active-card" href="#" aria-label="All notes folder">
+                            <span class="folder-label">
+                                <img class="folder-icon" src="../../../assets/folder.svg" alt="Folder icon">
+                                <strong>All notes</strong>
+                            </span>
+                            <span class="folder-arrow" aria-hidden="true">›</span>
+                        </a>
+
+                        <a class="folder-card" href="#" aria-label="Unclassified folder">
+                            <span class="folder-label">
+                                <img class="folder-icon" src="../../../assets/folder.svg" alt="Folder icon">
+                                <strong>Unclassified</strong>
+                            </span>
+                            <span class="folder-arrow" aria-hidden="true">›</span>
+                        </a>
+
+                        <a class="folder-card" href="#" aria-label="College Schedule folder">
+                            <span class="folder-label">
+                                <img class="folder-icon" src="../../../assets/folder.svg" alt="Folder icon">
+                                <strong>College Schedule</strong>
+                            </span>
+                            <span class="folder-arrow" aria-hidden="true">›</span>
+                        </a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

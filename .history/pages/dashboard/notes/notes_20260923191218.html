@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes | SNAP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../designs/notes.css" />
+    <link rel="stylesheet" href="../../../designs/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="../dashboard.html" aria-label="SNAP home">
+          <span class="brand-mark">S</span>
+          <span class="brand-copy">
+            <strong>SNAP</strong>
+            <small>Workspace</small>
+          </span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Sidebar navigation">
+          <a class="nav-item active" href="../../../pages/dashboard/dashboard.html">
+            <img class="nav-icon active" src="../../../assets/main icons/Vector.svg" alt="" aria-hidden="true" />
+            <span>Home</span>
+          </a>
+          <a class="nav-item" href="../../../pages/tasks.html">
+            <img class="nav-icon" src="../../../assets/main icons/check-square.svg" alt="" aria-hidden="true" />
+            <span>Tasks</span>
+          </a>
+          <a class="nav-item" href="../../../pages/ai_chat.html">
+            <img class="nav-icon" src="../../../assets/main icons/message-circle.svg" alt="" aria-hidden="true" />
+            <span>AI Chat</span>
+          </a>
+          <a class="nav-item" href="../../../pages/badges.html">
+            <img class="nav-icon" src="../../../assets/main icons/badge-check.svg" alt="" aria-hidden="true" />
+            <span>Badge</span>
+          </a>
+          <a class="nav-item" href="../../../pages/profile.html">
+            <img class="nav-icon" src="../../../assets/main icons/user.svg" alt="" aria-hidden="true" />
+            <span>Profile</span>
+          </a>
+        </nav>
+
+        <section class="recent-notes" aria-labelledby="recent-notes-title">
+          <h2 id="recent-notes-title">Recent Notes</h2>
+          <ul class="recent-list" aria-label="Recent notes list">
+            <li class="recent-item">
+              <span class="recent-title">Project recap</span>
+              <time datetime="2026-09-21T09:15">09:15 AM</time>
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="dashboard-main notes-main">
+        <header class="editor-header">
+          <button class="icon-button back-button" type="button" aria-label="Go back">‹</button>
+
+          <div class="title-block">
+            <input class="note-title" type="text" value="Input Title" aria-label="Note title" />
+            <div class="meta-row" aria-label="Note metadata">
+              <span class="meta-item">September 9</span>
+              <span class="meta-separator">•</span>
+              <span class="meta-item">2:04 PM</span>
+              <span class="meta-separator">•</span>
+              <span class="meta-item">0 words</span>
+            </div>
+          </div>
+
+          <div class="header-actions">
+            <button class="action-button save-button" type="button">Save</button>
+            <button class="action-button new-note-button" type="button">New note</button>
+            <button class="action-button text-action" type="button" >All notes</button>
+            <button class="avatar-button" type="button" aria-label="User profile"></button>
+          </div>
+        </header>
+
+        <section class="editor-surface" aria-label="Note editor">
+          <div class="toolbar" aria-label="Formatting toolbar">
+            <div class="toolbar-group">
+              <button class="tool-button bold" type="button" aria-label="Bold">B</button>
+              <button class="tool-button italic" type="button" aria-label="Italic">I</button>
+              <button class="tool-button underline" type="button" aria-label="Underline">U</button>
+              <button class="tool-button strike" type="button" aria-label="Strikethrough">S</button>
+              <button class="tool-button" type="button" aria-label="Checklist">
+                <img src="../../../assets/notes icons/boxicons_checklist.svg" alt="" aria-hidden="true" />
+              </button>
+            </div>
+
+            <div class="toolbar-group compact-group">
+              <button class="tool-button small" type="button">Inter</button>
+              <button class="tool-button small" type="button">14</button>
+              <button class="tool-button small" type="button">1.5</button>
+              <button class="tool-button small" type="button">—</button>
+              <button class="tool-button small" type="button">100%</button>
+              <button class="tool-button small" type="button">+</button>
+              <button class="tool-button small" type="button">
+                <img src="../../../assets/notes icons/mic.svg" alt="" aria-hidden="true" />
+              </button>
+              <button class="tool-button small" type="button">
+                <img src="../../../assets/notes icons/image.svg" alt="" aria-hidden="true" />
+              </button>
+              <button class="tool-button small" type="button">⋯</button>
+            </div>
+          </div>
+
+          <div class="editor-body">
+            <div class="draft-status">
+              <span class="status-badge">Draft</span>
+              <span class="status-text">• Autosaved</span>
+              <span class="word-total">0 words</span>
+            </div>
+
+            <div class="editor-placeholder" aria-label="Write your note">
+              Start writing your note...
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

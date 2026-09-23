@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | SNAP</title>
+    <link rel="stylesheet" href="../../designs/register.css">
+</head>
+<body>
+    <main class="register-page">
+        <section class="register-panel" aria-labelledby="register-title">
+            <header class="register-header">
+                <h1 id="register-title">Create Account</h1>
+                <p>Start planning your success today!</p>
+            </header>
+
+            <section class="register-card">
+                <form action="/register" method="POST">
+                    <label class="sr-only" for="first-name">First name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First name" autocomplete="given-name" required>
+
+                    <label class="sr-only" for="middle-name">Middle name or initial</label>
+                    <input type="text" id="middle-name" name="middle-name" placeholder="Middle name/initial" autocomplete="additional-name">
+
+                    <label class="sr-only" for="last-name">Last name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last name" autocomplete="family-name" required>
+
+                    <label class="sr-only" for="suffix">Suffix</label>
+                    <input type="text" id="suffix" name="suffix" placeholder="Suffix (optional)">
+
+                    <label class="sr-only" for="university">University or college</label>
+                    <input type="text" id="university" name="university" placeholder="University/College" required>
+
+                    <label class="sr-only" for="email">Email or username</label>
+                    <input type="email" id="email" name="email" placeholder="Email/Username" autocomplete="email" required>
+
+                    <label class="sr-only" for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" autocomplete="new-password" required>
+
+                    <label class="sr-only" for="confirm-password">Confirm password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" autocomplete="new-password" required>
+
+                    <label class="terms-row" for="terms">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span>I agree to the <a href="/terms-and-privacy">Terms &amp; Privacy Policy</a></span>
+                    </label>
+
+                    <button class="register-button" type="submit" onClick="window.location.href='../dashboard/dashboard.html'">Sign Up</button>
+                </form>
+                <p class="login-copy">Already have an account? <a href="login.html">Log In</a></p>
+            </section>
+        </section>
+
+        <section class="brand-panel" aria-label="SNAP branding">
+            <div class="logo-crop">
+                <img src="../../assets/Copilot_20260907_145330.png" alt="SNAP">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

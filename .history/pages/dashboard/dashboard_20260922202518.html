@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard | SNAP</title>
+        <link rel="stylesheet" href="../../designs/dashboard.css">
+    </head>
+    <body>
+        <div class="dashboard-shell">
+            <aside class="sidebar" aria-label="Main navigation">
+                <a class="brand" href="dashboard.html" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <span>
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </span>
+                </a>
+
+                <nav class="primary-nav">
+                    <a class="nav-item active" href="dashboard.html"><img class="nav-icon-active" src="../../assets/main icons/Vector.svg" alt="">Home
+                    </a>
+                    <a class="nav-item" href="../tasks.html"><img class="nav-icon" src="../../assets/main icons/check-square.svg" alt="">Tasks
+                    </a>
+                    <a class="nav-item" href="../ai_chat.html"><img class="nav-icon" src="../../assets/main icons/message-circle.svg" alt="">AI Chat
+                    </a>
+                    <a class="nav-item" href="../badges.html"><img class="nav-icon" src="../../assets/main icons/badge-check.svg" alt="">Badge
+                    </a>
+                    <a class="nav-item" href="../profile.html"><img class="nav-icon" src="../../assets/main icons/user.svg" alt="">Profile
+                    </a>
+                </nav>
+
+                <div class="recent-notes">
+                    <h2>Recent Notes</h2>
+                    <div class="empty-recent" aria-hidden="true"></div>
+                </div>
+            </aside>
+
+            <main class="dashboard-main">
+                <header class="dashboard-header">
+                    <label class="search-box">
+                        <span aria-hidden="true">⌕</span>
+                        <input type="search" placeholder="Search notes, tasks..." aria-label="Search notes and tasks">
+                    </label>
+                    <div class="header-actions">
+                        <a class="text-action new-note" href="notes/notes.html"><span aria-hidden="true"><img class="text-action-icon" src="../../assets/file-text.svg" alt=""></span>New note
+                        </a>
+                        <a class="text-action selected-action" href="notes/notes.html">All notes</a>
+                        <a class="text-action folder-action" href="notes/all_folders.html"><span aria-hidden="true"><img class="text-action-icon" src="../../assets/folder.svg" alt=""></span>Folders
+                        </a>
+                        <button class="profile-placeholder" type="button" aria-label="Open profile"></button>
+                    </div>
+                </header>
+
+                <section class="status-grid" aria-label="Task status">
+                    <article class="status-card today-card">
+                        <span class="status-icon" aria-hidden="true"><img class="status-icon-image today-icon" src="../../assets/main icons/check-square.svg" alt=""></span>
+                        <span class="status-info">
+                            <span class="status-label">Today</span>
+                            <strong class="status-count" aria-label="No count yet"></strong>
+                            <small>Tasks</small>
+                        </span>
+                    </article>
+                    <article class="status-card progress-card">
+                        <span class="status-icon" aria-hidden="true"><img class="status-icon-image" src="../../assets/loader.svg" alt=""></span>
+                        <span class="status-info">
+                            <span class="status-label">In Progress</span>
+                            <strong class="status-count" aria-label="No count yet"></strong>
+                            <small>Tasks</small>
+                        </span>
+                    </article>
+                    <article class="status-card completed-card">
+                        <span class="status-icon" aria-hidden="true"><img class="status-icon-image" src="../../assets/check-circle.svg" alt=""></span>
+                        <span class="status-info">
+                            <span class="status-label">Completed</span>
+                            <strong class="status-count" aria-label="No count yet"></strong>
+                            <small>Tasks</small>
+                        </span>
+                    </article>
+                </section>
+
+                <section class="notes-section" aria-labelledby="notes-title">
+                    <div class="section-heading">
+                        <h2 id="notes-title">Notes</h2>
+                        <button class="edit-button" type="button"><span aria-hidden="true"></span>Edit
+                        </button>
+                    </div>
+                    <div class="notes-grid">
+                        <button class="note-placeholder" type="button" aria-label="Empty note placeholder"></button>
+                        <button class="note-placeholder" type="button" aria-label="Empty note placeholder"></button>
+                        <button class="note-placeholder" type="button" aria-label="Empty note placeholder"></button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
