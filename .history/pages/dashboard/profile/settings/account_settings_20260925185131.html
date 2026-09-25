@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account Settings | SNAP</title>
+        <link rel="stylesheet" href="../../../../designs/dashboard.css">
+        <link rel="stylesheet" href="../../../../designs/settings/account_settings.css">
+    </head>
+    <body>
+        <div class="dashboard-shell profile-page">
+            <aside class="sidebar" aria-label="Main navigation">
+                <a class="brand" href="../../dashboard.html" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <span>
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </span>
+                </a>
+                <nav class="primary-nav">
+                    <a class="nav-item" href="../../dashboard.html">
+                        <img class="nav-icon" src="../../../../assets/main icons/Vector.svg" alt="">Home
+                    </a>
+                    <a class="nav-item" href="../../tasks.html">
+                        <img class="nav-icon" src="../../../../assets/main icons/check-square.svg" alt="">Tasks
+                    </a>
+                    <a class="nav-item" href="../../ai and chat/ai_and_chat.html">
+                        <img class="nav-icon" src="../../../../assets/main icons/message-circle.svg" alt="">AI &amp; Chat
+                    </a>
+                    <a class="nav-item" href="../../badges.html">
+                        <img class="nav-icon" src="../../../../assets/main icons/badge-check.svg" alt="">Badge
+                    </a>
+                    <a class="nav-item active" href="../profile.html">
+                        <img class="nav-icon-active" src="../../../../assets/main icons/user.svg" alt="">Profile
+                    </a>
+                </nav>
+                <div class="recent-notes">
+                    <div class="recent-heading">
+                        <h2>Recent Notes</h2>
+                    </div>
+                    <div class="empty-recent" aria-hidden="true"></div>
+                </div>
+            </aside>
+
+            <main class="dashboard-main profile-main settings-main">
+                <div class="settings-header">
+                    <a class="back-link" href="../profile.html" aria-label="Back to profile">
+                        <img class="back-icon" src="../../../../assets/eva_arrow-ios-back-outline.svg" alt="Back icon">
+                    </a>
+                    <h1>Account Settings</h1>
+                </div>
+
+                <section class="settings-panel" aria-label="Account settings panel">
+                    <div class="settings-card" id="account-settings-card">
+                        <div class="setting-field">
+                            <label for="first-name">First name</label>
+                            <div class="field-value" data-display="first-name">Kiddo</div>
+                            <input id="first-name" class="field-input" type="text" value="Kiddo" placeholder="Your name">
+                        </div>
+                        <div
+                        <div class="setting-field">
+                            <label for="last-name">Last name</label>
+                            <div class="field-value" data-display="last-name">Smith</div>
+                            <input id="last-name" class="field-input" type="text" value="Smith" placeholder="Your last name">
+                        </div>
+                        <div class="setting-field">
+                            <label for="email">Email address</label>
+                            <div class="field-value" data-display="email">kid@gmail.com</div>
+                            <input id="email" class="field-input" type="email" value="kid@gmail.com" placeholder="Email">
+                        </div>
+                        <div class="setting-field">
+                            <label for="username">Username</label>
+                            <div class="field-value" data-display="username">kiddo</div>
+                            <input id="username" class="field-input" type="text" value="kiddo" placeholder="Username">
+                        </div>
+                        <div class="setting-field">
+                            <label for="password">Password</label>
+                            <div class="field-value" data-display="password">********</div>
+                            <input id="password" class="field-input" type="password" value="" placeholder="Enter a new password">
+                        </div>
+                    </div>
+
+                    <div class="action-row">
+                        <button class="secondary-button hidden" id="cancel-button" type="button">Cancel</button>
+                        <button class="primary-button hidden" id="save-button" type="button">Save changes</button>
+                        <button class="primary-button" id="edit-button" type="button">Edit</button>
+                    </div>
+
+                    <div class="delete-account-row">
+                        <button class="delete-button" id="delete-account-button" type="button">Delete Account</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <div class="delete-modal" id="delete-modal" hidden>
+            <div class="delete-dialog" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+                <h2 id="delete-title">Delete Account?</h2>
+                <p>This action cannot be undone. This is a front-end confirmation only.</p>
+                <div class="delete-actions">
+                    <button class="secondary-button" id="delete-cancel" type="button">Cancel</button>
+                    <button class="delete-confirm-button" id="delete-confirm" type="button">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../../../functions/settings/account_settings.js"></script>
+    </body>
+</html>

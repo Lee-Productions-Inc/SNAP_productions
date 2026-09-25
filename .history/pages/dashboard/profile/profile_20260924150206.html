@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile | SNAP</title>
+        <link rel="stylesheet" href="../../../designs/dashboard.css">
+        <link rel="stylesheet" href="../../../designs/profile.css">
+    </head>
+    <body>
+        <div class="dashboard-shell profile-page">
+            <aside class="sidebar" aria-label="Main navigation">
+                <a class="brand" href="../dashboard.html" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <span>
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </span>
+                </a>
+                <nav class="primary-nav">
+                    <a class="nav-item" href="../dashboard.html"><img class="nav-icon" src="../../../assets/main icons/Vector.svg" alt="">Home
+                    </a>
+                    <a class="nav-item" href="../tasks.html"><img class="nav-icon" src="../../../assets/main icons/check-square.svg" alt="">Tasks
+                    </a>
+                    <a class="nav-item" href=""><img class="nav-icon" src="../../../assets/main icons/message-circle.svg" alt="">AI Chat
+                    </a>
+                    <a class="nav-item" href="../badges.html"><img class="nav-icon" src="../../../assets/main icons/badge-check.svg" alt="">Badge
+                    </a>
+                    <a class="nav-item active" href="profile.html"><img class="nav-icon-active" src="../../../assets/main icons/user.svg" alt="">Profile
+                    </a>
+                </nav>
+                <div class="recent-notes">
+                    <div class="recent-heading">
+                        <h2>Recent Notes</h2>
+                        <a href="../dashboard.html">See all</a>
+                    </div>
+                    <div class="empty-recent" aria-hidden="true"></div>
+                </div>
+            </aside>
+
+            <main class="dashboard-main profile-main">
+                <header class="profile-intro">
+                    <h1>Profile</h1>
+                    <div class="profile-photo" aria-label="Blank profile photo placeholder"></div>
+                    <h2>Kiddo</h2>
+                    <p>Level 12 - Focus Learner</p>
+                </header>
+                <section class="email-row" aria-labelledby="email-label">
+                    <span id="email-label" class="field-label">Email</span>
+                    <div class="email-value">
+                        <span class="email-icon" aria-hidden="true">✉</span>
+                        <strong>kid@gmail.com</strong>
+                    </div>
+                </section>
+                <section class="settings-card" aria-labelledby="settings-title">
+                    <h2 id="settings-title">Settings</h2>
+                    <a class="setting-row" href="#account">
+                        <span class="setting-icon">⚙</span>
+                        <strong>Account Settings</strong>
+                        <span class="chevron">›</span>
+                    </a>
+                    <a class="setting-row" href="#notifications">
+                        <span class="setting-icon">♧</span>
+                        <strong>Notification Settings</strong>
+                        <span class="chevron">›</span>
+                    </a>
+                    <a class="setting-row" href="#language">
+                        <span class="setting-icon language-icon">ENG</span>
+                        <strong>Language</strong>
+                        <span class="chevron">›</span>
+                    </a>
+                    <div class="setting-row">
+                        <span class="setting-icon">◔</span>
+                        <strong>Dark Mode</strong>
+                        <button class="toggle" type="button" aria-label="Dark mode off" aria-pressed="false"></button>
+                    </div>
+                    <a class="setting-row" href="#support">
+                        <span class="setting-icon">?</span>
+                        <strong>Help &amp; Support</strong>
+                        <span class="chevron">›</span>
+                    </a>
+                    <a class="setting-row" href="#about">
+                        <span class="setting-icon">i</span>
+                        <strong>About</strong>
+                        <span class="chevron">›</span>
+                    </a>
+                </section>
+                <button class="logout-button" type="button" id="logout-button"><span aria-hidden="true"></span>Log Out
+                </button>
+            </main>
+        </div>
+
+        <div class="logout-modal" id="logout-modal" hidden>
+            <div class="logout-dialog" role="dialog" aria-modal="true" aria-labelledby="logout-title">
+                <h2 id="logout-title">Are you sure?</h2>
+                <div class="logout-actions">
+                    <a class="confirm-logout" href="../../Login/login.html">Yes</a>
+                    <button class="cancel-logout" type="button" id="cancel-logout">No</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const logoutButton = document.querySelector('#logout-button');
+            const logoutModal = document.querySelector('#logout-modal');
+            const cancelLogout = document.querySelector('#cancel-logout');
+
+            logoutButton.addEventListener('click', () => {
+            logoutModal.hidden = false;
+            cancelLogout.focus();
+            });
+            cancelLogout.addEventListener('click', () => {
+            logoutModal.hidden = true;
+            logoutButton.focus();
+            });
+            logoutModal.addEventListener('click', (event) => {
+            if (event.target === logoutModal) {
+            logoutModal.hidden = true;
+            logoutButton.focus();
+            }
+            });
+        </script>
+    </body>
+</html>

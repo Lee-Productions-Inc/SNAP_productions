@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chats | SNAP</title>
+        <link rel="stylesheet" href="../../../designs/dashboard.css">
+        <link rel="stylesheet" href="../../../designs/ai/chats.css">
+    </head>
+    <body>
+        <div class="dashboard-shell">
+            <div class="dashboard-content">
+                <aside class="sidebar" aria-label="Main navigation">
+                    <a class="brand" href="../dashboard.html" aria-label="SNAP home">
+                        <span class="brand-mark">S</span>
+                        <span>
+                            <strong>SNAP</strong>
+                            <small>Workspace</small>
+                        </span>
+                    </a>
+
+                    <nav class="primary-nav">
+                        <a class="nav-item" href="../dashboard.html">
+                            <img class="nav-icon" src="../../../assets/main icons/Vector.svg" alt="Home icon">
+                            Home
+                        </a>
+                        <a class="nav-item" href="../tasks.html">
+                            <img class="nav-icon" src="../../../assets/main icons/check-square.svg" alt="Tasks icon">
+                            Tasks
+                        </a>
+                        <a class="nav-item active" href="ai_and_chat.html">
+                            <img class="nav-icon-active" src="../../../assets/main icons/message-circle.svg" alt="AI chat icon">
+                            AI &amp; Chat
+                        </a>
+                        <a class="nav-item" href="../badges.html">
+                            <img class="nav-icon" src="../../../assets/main icons/badge-check.svg" alt="Badge icon">
+                            Badge
+                        </a>
+                        <a class="nav-item" href="../profile/profile.html">
+                            <img class="nav-icon" src="../../../assets/main icons/user.svg" alt="Profile icon">
+                            Profile
+                        </a>
+                    </nav>
+
+                    <div class="chat-utils">
+                        <button class="new-chat-button" type="button">+ New Chat</button>
+                    </div>
+
+                    <div class="recent-notes" aria-label="Recent chat">
+                        <h2>Recent Chat</h2>
+                        <div class="empty-recent" aria-hidden="true"></div>
+                    </div>
+                </aside>
+
+                <main class="dashboard-main chats-panel" aria-label="Chats panel">
+                    <div class="top-bar">
+                        <a class="back-link" href="ai_and_chat.html" aria-label="Back to AI &amp; Chat">
+                            <img class="back-icon" src="../../../assets/eva_arrow-ios-back-outline.svg" alt="Back icon">
+                        </a>
+                        <a class="profile-placeholder" href="../profile/profile.html" aria-label="Open profile"></a>
+                    </div>
+
+                    <div class="chat-layout">
+                        <aside class="chat-list-panel" aria-label="Chat list">
+                            <div class="chat-list-header">
+                                <h1>Chats</h1>
+                                <button class="new-chat-mini" type="button">New</button>
+                            </div>
+
+                            <div class="chat-section">
+                                <div class="section-label">Direct</div>
+
+                                <a class="chat-item active" href="#" aria-label="Open Maya chat">
+                                    <span class="avatar avatar-maya">M</span>
+                                    <span class="chat-meta">
+                                        <strong>Maya Chen</strong>
+                                        <small>Can we review the notes before noon?</small>
+                                    </span>
+                                    <span class="chat-time">2m</span>
+                                </a>
+
+                                <a class="chat-item" href="#" aria-label="Open Noah chat">
+                                    <span class="avatar avatar-noah">N</span>
+                                    <span class="chat-meta">
+                                        <strong>Noah Park</strong>
+                                        <small>Shared the mockups for sign-off.</small>
+                                    </span>
+                                    <span class="chat-time">1h</span>
+                                </a>
+
+                                <a class="chat-item" href="#" aria-label="Open Ava chat">
+                                    <span class="avatar avatar-ava">A</span>
+                                    <span class="chat-meta">
+                                        <strong>Ava Brooks</strong>
+                                        <small>Thanks for the quick update.</small>
+                                    </span>
+                                    <span class="chat-time">Yesterday</span>
+                                </a>
+                            </div>
+
+                            <div class="chat-section">
+                                <div class="section-label">Groups</div>
+
+                                <a class="chat-item" href="#" aria-label="Open Product Team group chat">
+                                    <span class="avatar avatar-group">P</span>
+                                    <span class="chat-meta">
+                                        <strong>Product Team</strong>
+                                        <small>Planning for the sprint review.</small>
+                                    </span>
+                                    <span class="chat-time">8m</span>
+                                </a>
+
+                                <a class="chat-item" href="#" aria-label="Open Design Circle group chat">
+                                    <span class="avatar avatar-group-alt">D</span>
+                                    <span class="chat-meta">
+                                        <strong>Design Circle</strong>
+                                        <small>Latest iteration is ready for feedback.</small>
+                                    </span>
+                                    <span class="chat-time">3h</span>
+                                </a>
+                            </div>
+                        </aside>
+
+                        <section class="chat-thread" aria-label="Selected chat panel">
+                            <header class="thread-header">
+                                <div class="participant-details">
+                                    <span class="avatar avatar-group">P</span>
+                                    <div>
+                                        <h2>Product Team</h2>
+                                        <small>8 members online</small>
+                                    </div>
+                                </div>
+                                <button class="thread-button" type="button">View details</button>
+                            </header>
+
+                            <div class="message-stream" aria-live="polite">
+                                <div class="message-row incoming">
+                                    <div class="message-bubble">Morning sync is ready for review. We have updates on the onboarding flow and onboarding checklist.</div>
+                                    <span class="message-time">9:12 AM</span>
+                                </div>
+
+                                <div class="message-row outgoing">
+                                    <div class="message-bubble">Perfect. I’ll share the updated mockups in a few minutes.</div>
+                                    <span class="message-time">9:15 AM</span>
+                                </div>
+
+                                <div class="message-row incoming">
+                                    <div class="message-bubble">Great — we can finalize before the design review this afternoon.</div>
+                                    <span class="message-time">9:17 AM</span>
+                                </div>
+                            </div>
+
+                            <div class="composer" aria-label="Message composer">
+                                <div class="message-input-wrap">
+                                    <span class="input-icon" aria-hidden="true">◌</span>
+                                    <input type="text" placeholder="Message Product Team..." aria-label="Message Product Team">
+                                </div>
+                                <button class="send-button" type="button">Send</button>
+                            </div>
+                        </section>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

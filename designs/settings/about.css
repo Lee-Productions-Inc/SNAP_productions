@@ -1,0 +1,81 @@
+.settings-main {
+    padding: 18px clamp(28px, 7vw, 90px) 32px;
+}
+
+.settings-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.back-link {
+    color: #2d4564;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+    color: #1d4fc1;
+}
+
+.settings-header h1 {
+    margin: 0;
+    color: #18243a;
+    font-size: clamp(24px, 1.8vw, 32px);
+}
+
+.settings-panel {
+    display: grid;
+    gap: 18px;
+}
+
+.settings-card {
+    display: grid;
+    gap: 12px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 5px 14px rgba(67, 119, 158, 0.05);
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 52px;
+    padding: 6px 0;
+    border-bottom: 1px solid #edf1f5;
+}
+
+.info-item:last-child {
+    border-bottom: 0;
+}
+
+.info-item .field-label {
+    color: #4f5f74;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.info-item strong,
+.info-item a {
+    color: #253750;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.info-item a:hover,
+.info-item a:focus-visible {
+    color: #1d4fc1;
+}
+
+@media (max-width: 900px) {
+    .settings-main {
+        padding: 20px 18px 32px;
+    }
+}

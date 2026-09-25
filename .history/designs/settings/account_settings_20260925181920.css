@@ -1,0 +1,134 @@
+.settings-main {
+    padding: 18px clamp(28px, 7vw, 90px) 32px;
+}
+
+.settings-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.back-link {
+    color: #2d4564;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+    color: #1d4fc1;
+}
+
+.settings-header h1 {
+    margin: 0;
+    color: #18243a;
+    font-size: clamp(24px, 1.8vw, 32px);
+}
+
+.settings-panel {
+    display: grid;
+    gap: 18px;
+}
+
+.settings-card {
+    display: grid;
+    gap: 14px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 5px 14px rgba(67, 119, 158, 0.05);
+}
+
+.setting-field {
+    display: grid;
+    gap: 8px;
+}
+
+.setting-field label,
+.field-label {
+    color: #4f5f74;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.setting-field input,
+.setting-field select {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid #dfe7f0;
+    border-radius: 10px;
+    background: #f9fbfd;
+    color: #1d2a3a;
+    font-size: 12px;
+    outline: none;
+}
+
+.setting-field input:focus,
+.setting-field select:focus {
+    border-color: rgba(91, 126, 199, 0.7);
+    box-shadow: 0 0 0 3px rgba(91, 126, 199, 0.12);
+}
+
+.action-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.delete-account-row{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    
+}
+
+.primary-button,
+.secondary-button,
+.delete-button {
+    min-height: 40px;
+    padding: 0 18px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.primary-button {
+    background: #17243a;
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(23, 36, 58, 0.16);
+}
+
+.secondary-button {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #dfe7f0;
+    color: #36506d;
+}
+
+.delete-button {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 900px) {
+    .settings-main {
+        padding: 20px 18px 32px;
+    }
+
+    .action-row {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button,
+    .delete-button {
+        width: 100%;
+    }
+}

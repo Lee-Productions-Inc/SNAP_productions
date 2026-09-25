@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notification Settings | SNAP</title>
+        <link rel="stylesheet" href="../../../../designs/dashboard.css">
+        <link rel="stylesheet" href="../../../../designs/settings/notification_settings.css">
+    </head>
+    <body>
+        <div class="dashboard-shell profile-page">
+            <aside class="sidebar" aria-label="Main navigation">
+                <a class="brand" href="../../dashboard.html" aria-label="SNAP home">
+                    <span class="brand-mark">S</span>
+                    <span>
+                        <strong>SNAP</strong>
+                        <small>Workspace</small>
+                    </span>
+                </a>
+                <nav class="primary-nav">
+                    <a class="nav-item" href="../../dashboard.html">
+                        <img class="nav-icon" src="../../../../assets/main icons/Vector.svg" alt="">Home
+                    </a>
+                    <a class="nav-item" href="../../tasks.html">
+                        <img class="nav-icon" src="../../../../assets/main icons/check-square.svg" alt="">Tasks
+                    </a>
+                    <a class="nav-item" href="../../ai and chat/ai_and_chat.html">
+                        <img class="nav-icon" src="../../../../assets/main icons/message-circle.svg" alt="">AI &amp; Chat
+                    </a>
+                    <a class="nav-item" href="../../badges.html">
+                        <img class="nav-icon" src="../../../../assets/main icons/badge-check.svg" alt="">Badge
+                    </a>
+                    <a class="nav-item active" href="../profile.html">
+                        <img class="nav-icon-active" src="../../../../assets/main icons/user.svg" alt="">Profile
+                    </a>
+                </nav>
+                <div class="recent-notes">
+                    <div class="recent-heading">
+                        <h2>Recent Notes</h2>
+                        <a href="../../dashboard.html">See all</a>
+                    </div>
+                    <div class="empty-recent" aria-hidden="true"></div>
+                </div>
+            </aside>
+
+            <main class="dashboard-main profile-main settings-main">
+                <div class="settings-header">
+                    <a class="back-link" href="../profile.html" aria-label="Back to profile">
+                        <img class="back-icon" src="../../../../assets/eva_arrow-ios-back-outline.svg" alt="Back icon">
+                    </a>
+                    <h1>Notification Settings</h1>
+                </div>
+
+                <section class="settings-panel" aria-label="Notification settings panel">
+                    <div class="settings-card">
+                        <label class="switch-field" for="email-notifs">
+                            <span>Email notifications</span>
+                            <span class="switch">
+                                <input id="email-notifs" type="checkbox" checked>
+                                <span class="slider"></span>
+                            </span>
+                        </label>
+                        <label class="switch-field" for="push-reminders">
+                            <span>Push reminders</span>
+                            <span class="switch">
+                                <input id="push-reminders" type="checkbox" checked>
+                                <span class="slider"></span>
+                            </span>
+                        </label>
+                        <label class="switch-field" for="weekly-summary">
+                            <span>Weekly summary</span>
+                            <span class="switch">
+                                <input id="weekly-summary" type="checkbox">
+                                <span class="slider"></span>
+                            </span>
+                        </label>
+                        <div class="setting-field select-field">
+                            <label for="reminder-time">Reminder timing</label>
+                            <select id="reminder-time">
+                                <option selected>Daily</option>
+                                <option>Weekly</option>
+                                <option>Every 2 days</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="action-row">
+                        <button class="secondary-button" type="button">Cancel</button>
+                        <button class="primary-button" type="button">Save changes</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

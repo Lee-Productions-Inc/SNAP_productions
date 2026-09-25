@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AI &amp; Chat | SNAP</title>
+        <link rel="stylesheet" href="../../../designs/dashboard.css">
+        <link rel="stylesheet" href="../../../designs/ai.css">
+    </head>
+    <body>
+        <div class="dashboard-shell">
+            <div class="dashboard-content">
+                <aside class="sidebar" aria-label="Main navigation">
+                    <a class="brand" href="../dashboard.html" aria-label="SNAP home">
+                        <span class="brand-mark">S</span>
+                        <span>
+                            <strong>SNAP</strong>
+                            <small>Workspace</small>
+                        </span>
+                    </a>
+
+                    <nav class="primary-nav">
+                        <a class="nav-item" href="../dashboard.html">
+                            <img class="nav-icon" src="../../../assets/main icons/Vector.svg" alt="Home icon">
+                            Home
+                        </a>
+                        <a class="nav-item" href="../tasks.html">
+                            <img class="nav-icon" src="../../../assets/main icons/check-square.svg" alt="Tasks icon">
+                            Tasks
+                        </a>
+                        <a class="nav-item active" href="ai_and_chat.html">
+                            <img class="nav-icon-active" src="../../../assets/main icons/message-circle.svg" alt="AI chat icon">
+                            AI & Chat
+                        </a>
+                        <a class="nav-item" href="../badges.html">
+                            <img class="nav-icon" src="../../../assets/main icons/badge-check.svg" alt="Badge icon">
+                            Badge
+                        </a>
+                        <a class="nav-item" href="../profile/profile.html">
+                            <img class="nav-icon" src="../../../assets/main icons/user.svg" alt="Profile icon">
+                            Profile
+                        </a>
+                    </nav>
+
+                    <div class="chat-utils">
+                        <button class="new-chat-button" type="button">+ New Chat</button>
+                    </div>
+
+                    <div class="recent-notes" aria-label="Recent chat">
+                        <h2>Recent Chat</h2>
+                        <div class="empty-recent" aria-hidden="true"></div>
+                    </div>
+                </aside>
+
+                <main class="dashboard-main ai-chat-panel" aria-label="AI & Chat landing page">
+                    <div class="top-bar">
+                        <a class="profile-placeholder" href="../profile/profile.html" aria-label="Open profile"></a>
+                    </div>
+
+                    <div class="chat-surface ai-landing-surface">
+                        <div class="chat-message" aria-label="AI & Chat heading">AI &amp; Chat</div>
+
+                        <div class="ai-option-grid">
+                            <a class="ai-option-card" href="ai.html">
+                                <span class="option-label">SNAP AI</span>
+                                <span class="option-copy">Continue with your assistant.</span>
+                            </a>
+
+                            <a class="ai-option-card" href="ai_and_chat.html">
+                                <span class="option-label">Shared Chats</span>
+                                <span class="option-copy">Open collaborative conversations.</span>
+                            </a>
+
+                            <a class="ai-option-card" href="ai_and_chat.html">
+                                <span class="option-label">Direct Chats</span>
+                                <span class="option-copy">Start a one-to-one discussion.</span>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
