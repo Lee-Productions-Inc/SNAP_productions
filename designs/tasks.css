@@ -155,3 +155,1192 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+/* =========================================
+   NEW TASK MODAL
+   ========================================= */
+
+.task-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(26, 38, 62, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.task-modal-overlay.show {
+    display: flex;
+}
+
+
+/* MODAL */
+
+.task-modal {
+    width: min(100%, 650px);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 24px 30px 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c5e4ff 0%,
+            #eaf5ff 50%,
+            #75b8ff 100%
+        );
+
+    box-shadow:
+        0 20px 50px rgba(39, 78, 119, 0.22);
+}
+
+
+/* MODAL TITLE */
+
+.task-modal-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.task-modal-title h2 {
+    margin: 0;
+
+    color: #5d6b7d;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* CLOSE BUTTON */
+
+.close-task-modal {
+    width: 34px;
+    height: 34px;
+
+    border: 0;
+    background: transparent;
+
+    color: #1f2c40;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition: background 0.2s ease;
+}
+
+.close-task-modal:hover {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+
+/* FORM */
+
+#taskForm {
+    width: min(100%, 290px);
+    margin: 0 auto;
+}
+
+
+/* FORM GROUP */
+
+.task-form-group {
+    margin-bottom: 8px;
+}
+
+.task-form-group label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #526074;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.task-form-group label span {
+    font-weight: 500;
+}
+
+
+/* INPUTS */
+
+.task-form-group input,
+.task-form-group select,
+.task-form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #b9c8d8;
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    color: #344258;
+
+    font-family: inherit;
+    font-size: 11px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.task-form-group input,
+.task-form-group select {
+    height: 34px;
+
+    padding: 0 11px;
+}
+
+.task-form-group textarea {
+    min-height: 132px;
+
+    padding: 11px;
+
+    resize: vertical;
+}
+
+
+/* PLACEHOLDER */
+
+.task-form-group input::placeholder,
+.task-form-group textarea::placeholder {
+    color: #a5afbb;
+}
+
+
+/* FOCUS */
+
+.task-form-group input:focus,
+.task-form-group select:focus,
+.task-form-group textarea:focus {
+    border-color: #4d8de8;
+
+    box-shadow:
+        0 0 0 3px rgba(77, 141, 232, 0.12);
+}
+
+
+/* CREATE BUTTON */
+
+.create-task-button {
+    display: block;
+
+    margin: 12px auto 0;
+
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: #2455d6;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px rgba(36, 85, 214, 0.25);
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.create-task-button:hover {
+    background: #1f49bc;
+
+    transform: translateY(-1px);
+}
+
+.create-task-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   REAL TASK CARDS
+   ========================================= */
+
+.task-card:not(.empty-card) {
+    min-height: 148px;
+
+    padding: 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(214, 223, 234, 0.9);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 10px 18px rgba(87, 116, 148, 0.06);
+
+    position: relative;
+}
+
+
+/* CARD CATEGORY */
+
+.task-card-category {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #5d6b7d;
+
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* CARD TITLE */
+
+.task-card-title {
+    margin: 0 0 7px;
+
+    color: #1f2c40;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* CARD DESCRIPTION */
+
+.task-card-description {
+    margin: 0 0 12px;
+
+    color: #7a8798;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* DUE DATE */
+
+.task-card-due {
+    margin: 0 0 12px;
+
+    color: #5d6b7d;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* CARD BUTTONS */
+
+.task-card-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.task-card-actions button {
+    border: 0;
+    border-radius: 8px;
+
+    padding: 6px 9px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.complete-task-button {
+    background: #dcf7ea;
+    color: #15945c;
+}
+
+.delete-task-button {
+    background: #ffe5e5;
+    color: #d14b4b;
+}
+
+
+/* EMPTY MESSAGE */
+
+.no-tasks-message {
+    grid-column: 1 / -1;
+
+    padding: 30px;
+
+    border: 1px dashed rgba(146, 181, 216, 0.5);
+    border-radius: 16px;
+
+    text-align: center;
+
+    color: #8c99a9;
+
+    font-size: 13px;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================
+   TASK THREE-DOT MENU
+   ========================================= */
+
+.task-menu-wrapper {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.task-menu-button {
+    width: 30px;
+    height: 30px;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #6f7b89;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.task-menu-button:hover {
+    background: #edf3f9;
+}
+
+.task-menu {
+    position: absolute;
+    top: 32px;
+    right: 0;
+
+    z-index: 50;
+
+    min-width: 145px;
+
+    padding: 6px;
+
+    border: 1px solid #dce5ee;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(31, 44, 64, 0.15);
+
+    display: none;
+}
+
+.task-menu.show {
+    display: block;
+}
+
+.task-menu button {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #344258;
+
+    text-align: left;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.task-menu button:hover {
+    background: #f1f6fb;
+}
+
+.task-menu .delete-menu-button {
+    color: #d14b4b;
+}
+
+
+/* =========================================
+   EDIT TASK MODAL
+   ========================================= */
+
+.edit-task-modal {
+    width: min(100%, 500px);
+}
+
+.edit-task-modal .task-modal-title h2 {
+    color: #1f2c40;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* CLEAR DUE DATE */
+
+.clear-due-date {
+    display: inline-block;
+
+    margin-top: 6px;
+
+    border: 0;
+    background: transparent;
+
+    color: #315cc7;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.clear-due-date:hover {
+    text-decoration: underline;
+}
+
+
+/* ALIGN RIGHT-SIDE ICONS */
+
+.task-form-group {
+    position: relative;
+}
+
+.task-form-group select,
+.task-form-group input[type="date"],
+.task-form-group input[type="time"] {
+    padding-right: 42px;
+}
+
+.task-form-group input[type="date"],
+.task-form-group input[type="time"] {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+/* DATE AND TIME PICKER ICONS */
+
+.task-form-group input[type="date"]::-webkit-calendar-picker-indicator,
+.task-form-group input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 16px;
+
+    margin: 0;
+
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+
+/* SELECT DROPDOWN */
+
+.task-form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4.5 6 8l4-3.5' fill='none' stroke='%23526074' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px 12px;
+}
+
+
+/* EDIT MODAL FIELDS */
+
+.edit-task-modal select,
+.edit-task-modal input[type="date"],
+.edit-task-modal input[type="time"] {
+    padding-right: 42px;
+}
+
+.edit-task-modal .task-form-group select {
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4.5 6 8l4-3.5' fill='none' stroke='%23526074' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px 12px;
+}
+
+.edit-task-modal .task-form-group input[type="date"]::-webkit-calendar-picker-indicator,
+.edit-task-modal .task-form-group input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 16px;
+    height: 16px;
+
+    margin: 0;
+
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.close-task-modal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    line-height: 1;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   REFERENCE TASK CARD STYLE
+   ========================================= */
+
+.task-card:not(.empty-card) {
+    min-height: 150px;
+    padding: 14px;
+
+    border-radius: 14px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* -----------------------------------------
+   TOP ROW
+   ----------------------------------------- */
+
+.task-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 5px;
+}
+
+
+/* -----------------------------------------
+   CATEGORY
+   ----------------------------------------- */
+
+.task-card-category {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin: 0;
+
+    color: #6f8794;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: none;
+}
+
+
+/* =========================================
+   FILE-TEXT CATEGORY ICON
+   ========================================= */
+
+.task-category-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+.task-category-icon img {
+    display: block;
+
+    width: 9px;
+    height: 9px;
+}
+
+
+/* -----------------------------------------
+   IN PROGRESS FILE ICON
+   ----------------------------------------- */
+
+.task-category-icon-in-progress {
+    background: #fff1bf;
+}
+
+.task-category-icon-in-progress img {
+    filter:
+        invert(65%)
+        sepia(75%)
+        saturate(850%)
+        hue-rotate(355deg)
+        brightness(95%);
+}
+
+
+/* -----------------------------------------
+   OVERDUE FILE ICON
+   ----------------------------------------- */
+
+.task-category-icon-overdue {
+    background: #ffe3e3;
+}
+
+.task-category-icon-overdue img {
+    filter:
+        invert(42%)
+        sepia(70%)
+        saturate(1100%)
+        hue-rotate(325deg)
+        brightness(92%);
+}
+
+
+/* -----------------------------------------
+   COMPLETED FILE ICON
+   ----------------------------------------- */
+
+.task-category-icon-completed {
+    background: #dcf7ea;
+}
+
+.task-category-icon-completed img {
+    filter:
+        invert(50%)
+        sepia(55%)
+        saturate(850%)
+        hue-rotate(110deg)
+        brightness(90%);
+}
+
+
+/* -----------------------------------------
+   TITLE
+   ----------------------------------------- */
+
+.task-card-title {
+    margin: 0 0 10px;
+
+    color: #26364a;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* -----------------------------------------
+   DESCRIPTION
+   ----------------------------------------- */
+
+.task-card-description {
+    margin: 0 0 12px;
+
+    color: #9aa6b4;
+
+    font-size: 8px;
+    line-height: 1.4;
+}
+
+
+/* -----------------------------------------
+   DUE DATE
+   ----------------------------------------- */
+
+.task-card-due {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    margin: 0 0 8px;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+/* =========================================
+   DUE DATE / TIME ICON
+   ========================================= */
+
+.task-due-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+/* =========================================
+   IN PROGRESS
+   Clock = task is still active
+   ========================================= */
+
+.in-progress-due {
+    color: #c28a16;
+}
+
+.in-progress-due .task-due-icon {
+    background: #fff1bf;
+    color: #d29a1b;
+
+    font-size: 9px;
+}
+
+/* =========================================
+   OVERDUE
+   Warning = deadline passed
+   ========================================= */
+
+.overdue-due {
+    color: #d64a4a;
+}
+
+.overdue-due .task-due-icon {
+    background: #ffe3e3;
+    color: #d64a4a;
+
+    font-size: 9px;
+}
+
+/* =========================================
+   COMPLETED
+   Check = task finished
+   ========================================= */
+
+.completed-due {
+    color: #15945c;
+}
+
+.completed-due .task-due-icon {
+    background: #dcf7ea;
+    color: #15945c;
+
+    font-size: 8px;
+}
+
+
+/* -----------------------------------------
+   ACTION BUTTONS
+   ----------------------------------------- */
+
+.task-card-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    margin-top: auto;
+}
+
+.task-card-actions button {
+    border: 0;
+    border-radius: 7px;
+
+    padding: 5px 8px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+/* COMPLETE */
+
+.complete-task-button {
+    background: #e2f8ef;
+    color: #3aae83;
+}
+
+.complete-task-button:hover {
+    background: #d3f2e5;
+}
+
+
+/* COMPLETED */
+
+.completed-task-button {
+    background: #dcf7ea;
+    color: #15945c;
+
+    cursor: default !important;
+}
+
+
+/* REMINDER */
+
+.reminder-task-button {
+    border: 0;
+    border-radius: 7px;
+
+    padding: 5px 8px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.reminder-task-button-on {
+    background: #e8f1ff;
+    color: #2c63d6;
+}
+
+.reminder-task-button-off {
+    background: #edf1f5;
+    color: #6e7b8b;
+}
+
+.reminder-task-button:hover {
+    filter: brightness(0.98);
+}
+
+
+/* -----------------------------------------
+   THREE DOT MENU
+   ----------------------------------------- */
+
+.task-menu-wrapper {
+    position: relative;
+}
+
+.task-menu-button {
+    border: 0;
+
+    background: transparent;
+    color: #7d8b9a;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    padding: 2px 0;
+}
+
+.task-menu-button:hover {
+    color: #445468;
+}
+
+
+/* -----------------------------------------
+   MENU
+   ----------------------------------------- */
+
+.task-menu {
+    position: absolute;
+
+    top: 22px;
+    right: 0;
+
+    z-index: 20;
+
+    min-width: 120px;
+
+    padding: 5px;
+
+    border: 1px solid rgba(210, 220, 232, 0.9);
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(61, 82, 108, 0.15);
+
+    display: none;
+}
+
+.task-menu.show {
+    display: block;
+}
+
+.task-menu button {
+    display: block;
+
+    width: 100%;
+
+    padding: 7px 8px;
+
+    border: 0;
+    border-radius: 6px;
+
+    background: transparent;
+    color: #526174;
+
+    font-size: 9px;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.task-menu button:hover {
+    background: #f1f5fa;
+}
+
+.task-menu .delete-menu-button {
+    color: #d14b4b;
+}
+
+
+/* =========================================
+   TASK PAGE TITLE + STATUS LEGEND
+   ========================================= */
+
+.task-page-title {
+    margin: 8px 0 14px;
+}
+
+.task-page-title h1 {
+    margin: 0 0 9px;
+
+    color: #1f2c40;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   STATUS LEGEND
+   ========================================= */
+
+/* =========================================
+   TASK BOARD HEADER
+   ========================================= */
+
+.task-board-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   STATUS COLORS FOR TASK CARDS
+   ========================================= */
+
+
+/* IN PROGRESS */
+
+.task-card.status-in-progress .task-card-category {
+    color: #c28a16;
+}
+
+.task-card.status-in-progress .task-category-icon {
+    background: #fff1bf;
+}
+
+
+/* OVERDUE */
+
+.task-card.status-overdue .task-card-category {
+    color: #d64a4a;
+}
+
+.task-card.status-overdue .task-category-icon {
+    background: #ffe3e3;
+}
+
+
+/* COMPLETED */
+
+.task-card.status-completed .task-card-category {
+    color: #15945c;
+}
+
+.task-card.status-completed .task-category-icon {
+    background: #dcf7ea;
+}
+
+
+/* =========================================
+   DUE DATE + TIME STATUS COLORS
+   ========================================= */
+
+
+/* IN PROGRESS */
+
+.task-card-due.in-progress-due {
+    color: #c28a16;
+}
+
+.task-card-due.in-progress-due .task-due-icon {
+    background: #fff1bf;
+    color: #d29a1b;
+}
+
+
+/* OVERDUE */
+
+.task-card-due.overdue-due {
+    color: #d64a4a;
+}
+
+.task-card-due.overdue-due .task-due-icon {
+    background: #ffe3e3;
+    color: #d64a4a;
+}
+
+
+/* COMPLETED */
+
+.task-card-due.completed-due {
+    color: #15945c;
+}
+
+.task-card-due.completed-due .task-due-icon {
+    background: #dcf7ea;
+    color: #15945c;
+}
+
+
+/* =========================================
+   REMINDER ICON
+   ========================================= */
+
+.reminder-task-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* Reminder circle */
+
+.reminder-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    font-size: 7px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+/* Reminder ON */
+
+.reminder-task-button-on .reminder-icon {
+    background: #dceaff;
+    color: #3971d4;
+}
+
+
+/* Reminder OFF */
+
+.reminder-task-button-off .reminder-icon {
+    background: #e5e9ee;
+    color: #778494;
+}
+
+
+/* =========================================
+   COMPLETED BUTTON
+   ========================================= */
+
+.completed-task-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    background: #dcf7ea;
+    color: #15945c;
+
+    cursor: default !important;
+}
+
+
+/* Completed check icon */
+
+.completed-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #c9f0df;
+    color: #15945c;
+
+    font-size: 7px;
+    font-weight: 800;
+    line-height: 1;
+}

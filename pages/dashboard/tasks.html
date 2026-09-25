@@ -1,98 +1,839 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Tasks | SNAP</title>
-        <link rel="stylesheet" href="../../designs/dashboard.css">
-        <link rel="stylesheet" href="../../designs/tasks.css">
-    </head>
-    <body>
-        <div class="dashboard-shell">
-            <aside class="sidebar" aria-label="Main navigation">
-                <a class="brand" href="dashboard.html" aria-label="SNAP home">
-                    <span class="brand-mark">S</span>
-                    <span>
-                        <strong>SNAP</strong>
-                        <small>Workspace</small>
-                    </span>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Tasks | SNAP</title>
+
+    <link
+        rel="stylesheet"
+        href="../../designs/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../designs/tasks.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-shell">
+
+
+        <!-- ========================================= -->
+        <!-- SIDEBAR -->
+        <!-- ========================================= -->
+
+        <aside
+            class="sidebar"
+            aria-label="Main navigation"
+        >
+
+            <a
+                class="brand"
+                href="dashboard.html"
+                aria-label="SNAP home"
+            >
+
+                <span class="brand-mark">
+                    S
+                </span>
+
+                <span>
+
+                    <strong>
+                        SNAP
+                    </strong>
+
+                    <small>
+                        Workspace
+                    </small>
+
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="primary-nav">
+
+
+                <!-- HOME -->
+
+                <a
+                    class="nav-item"
+                    href="dashboard.html"
+                >
+
+                    <img
+                        class="nav-icon"
+                        src="../../assets/main icons/Vector.svg"
+                        alt=""
+                    >
+
+                    Home
+
                 </a>
 
-                <nav class="primary-nav">
-                    <a class="nav-item" href="dashboard.html">
-                        <img class="nav-icon" src="../../assets/main icons/Vector.svg" alt="">
-                        Home
-                    </a>
-                    <a class="nav-item active" href="tasks.html">
-                        <img class="nav-icon-active" src="../../assets/main icons/check-square.svg" alt="">
-                        Tasks
-                    </a>
-                    <a class="nav-item" href="ai and chat/ai_and_chat.html">
-                        <img class="nav-icon" src="../../assets/main icons/message-circle.svg" alt="">
-                        AI & Chat
-                    </a>
-                    <a class="nav-item" href="badges.html">
-                        <img class="nav-icon" src="../../assets/main icons/badge-check.svg" alt="">
-                        Badge
-                    </a>
-                    <a class="nav-item" href="profile/profile.html">
-                        <img class="nav-icon" src="../../assets/main icons/user.svg" alt="">
-                        Profile
-                    </a>
-                </nav>
-                <div class="recent-notes">
-                    <h2>Recent Notes</h2>
-                    <div class="empty-recent" aria-hidden="true"></div>
+
+                <!-- TASKS -->
+
+                <a
+                    class="nav-item active"
+                    href="tasks.html"
+                >
+
+                    <img
+                        class="nav-icon-active"
+                        src="../../assets/main icons/check-square.svg"
+                        alt=""
+                    >
+
+                    Tasks
+
+                </a>
+
+
+                <!-- AI & CHAT -->
+
+                <a
+                    class="nav-item"
+                    href="ai and chat/ai_and_chat.html"
+                >
+
+                    <img
+                        class="nav-icon"
+                        src="../../assets/main icons/message-circle.svg"
+                        alt=""
+                    >
+
+                    AI & Chat
+
+                </a>
+
+
+                <!-- BADGES -->
+
+                <a
+                    class="nav-item"
+                    href="badges.html"
+                >
+
+                    <img
+                        class="nav-icon"
+                        src="../../assets/main icons/badge-check.svg"
+                        alt=""
+                    >
+
+                    Badge
+
+                </a>
+
+
+                <!-- PROFILE -->
+
+                <a
+                    class="nav-item"
+                    href="profile/profile.html"
+                >
+
+                    <img
+                        class="nav-icon"
+                        src="../../assets/main icons/user.svg"
+                        alt=""
+                    >
+
+                    Profile
+
+                </a>
+
+            </nav>
+
+
+            <!-- RECENT NOTES -->
+
+            <div class="recent-notes">
+
+                <h2>
+                    Recent Notes
+                </h2>
+
+                <div
+                    class="empty-recent"
+                    aria-hidden="true"
+                ></div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ========================================= -->
+        <!-- MAIN TASKS -->
+        <!-- ========================================= -->
+
+        <main class="tasks-main">
+
+
+            <!-- ========================================= -->
+            <!-- TASK PAGE TITLE -->
+            <!-- ========================================= -->
+
+            <div class="task-page-title">
+
+                <h1>
+                    My Tasks
+                </h1>
+
+            </div>
+
+
+
+            <!-- ========================================= -->
+            <!-- HEADER / SEARCH -->
+            <!-- ========================================= -->
+
+            <header class="tasks-header">
+
+
+                <!-- SEARCH -->
+
+                <label
+                    class="search-box"
+                    aria-label="Search tasks"
+                >
+
+                    <span aria-hidden="true">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        id="taskSearch"
+                        placeholder="Search tasks..."
+                        aria-label="Search tasks"
+                    >
+
+                </label>
+
+
+                <!-- NEW TASK BUTTON -->
+
+                <button
+                    class="new-task-button"
+                    id="newTaskButton"
+                    type="button"
+                >
+
+                    New task
+
+                </button>
+
+            </header>
+
+
+
+            <!-- ========================================= -->
+            <!-- TASK BOARD -->
+            <!-- ========================================= -->
+
+            <section
+                class="task-board"
+                aria-label="Task board"
+            >
+
+
+                <!-- CATEGORY FILTERS -->
+
+                <div class="task-board-header">
+
+                    <div></div>
+
+
+                    <div
+                        class="task-filter-list"
+                        aria-label="Task categories"
+                    >
+
+                        <button
+                            type="button"
+                            class="task-filter active"
+                            data-category="All"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            type="button"
+                            class="task-filter"
+                            data-category="Study"
+                        >
+                            Study
+                        </button>
+
+                        <button
+                            type="button"
+                            class="task-filter"
+                            data-category="Assignment"
+                        >
+                            Assignment
+                        </button>
+
+                        <button
+                            type="button"
+                            class="task-filter"
+                            data-category="Quiz"
+                        >
+                            Quiz
+                        </button>
+
+                    </div>
+
                 </div>
-            </aside>
 
-            <main class="tasks-main">
-                <header class="tasks-header">
-                    <label class="search-box" aria-label="Search tasks">
-                        <span aria-hidden="true">⌕</span>
-                        <input type="search" placeholder="Search tasks..." aria-label="Search tasks">
+
+
+                <!-- ========================================= -->
+                <!-- MY TASKS -->
+                <!-- ========================================= -->
+
+                <div class="task-group">
+
+                    <div
+                        class="empty-task-grid"
+                        id="myTasksGrid"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- ========================================= -->
+                <!-- OVERDUE -->
+                <!-- ========================================= -->
+
+                <div class="task-group">
+
+                    <h2>
+                        Overdue
+                    </h2>
+
+                    <div
+                        class="empty-task-grid"
+                        id="overdueTasksGrid"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- ========================================= -->
+                <!-- COMPLETED -->
+                <!-- ========================================= -->
+
+                <div class="task-group">
+
+                    <h2>
+                        Completed
+                    </h2>
+
+                    <div
+                        class="empty-task-grid"
+                        id="completedTasksGrid"
+                    ></div>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ========================================= -->
+    <!-- NEW TASK MODAL -->
+    <!-- ========================================= -->
+
+    <div
+        class="task-modal-overlay"
+        id="taskModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="task-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="taskModalTitle"
+        >
+
+            <div class="task-modal-title">
+
+                <h2 id="taskModalTitle">
+                    Add new task
+                </h2>
+
+
+                <button
+                    type="button"
+                    class="close-task-modal"
+                    id="closeTaskModal"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <!-- NEW TASK FORM -->
+
+            <form id="taskForm">
+
+
+                <!-- TITLE -->
+
+                <div class="task-form-group">
+
+                    <label for="taskTitle">
+                        Add Title
                     </label>
-                    <button class="new-task-button" type="button">New task</button>
-                </header>
 
-                <section class="task-board" aria-label="Task board">
-                    <div class="task-board-header">
-                        <h1>My Tasks</h1>
-                        <div class="task-filter-list" aria-label="Task categories">
-                        </div>
-                    </div>
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        name="title"
+                        placeholder="e.g Homework for IAS, To do this week"
+                        required
+                    >
 
-                    <div class="task-group">
-                        <div class="empty-task-grid">
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="task-group">
-                        <h2>Overdue</h2>
-                        <div class="empty-task-grid">
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                        </div>
-                    </div>
 
-                    <div class="task-group">
-                        <h2>Completed</h2>
-                        <div class="empty-task-grid">
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                            <div class="task-card empty-card" aria-hidden="true"></div>
-                        </div>
-                    </div>
-                </section>
-            </main>
+
+                <!-- CATEGORY -->
+
+                <div class="task-form-group">
+
+                    <label for="taskCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="taskCategory"
+                        name="category"
+                        required
+                    >
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Assignment">
+                            Assignment
+                        </option>
+
+                        <option value="Quiz">
+                            Quiz
+                        </option>
+
+                        <option value="Customize">
+                            Customize
+                        </option>
+
+                    </select>
+
+
+                    <input
+                        type="text"
+                        id="customCategory"
+                        name="customCategory"
+                        placeholder="Type your own category..."
+                        style="display: none;"
+                    >
+
+                </div>
+
+
+
+                <!-- DUE DATE -->
+
+                <div class="task-form-group">
+
+                    <label for="taskDueDate">
+                        Due date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="taskDueDate"
+                        name="dueDate"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DUE TIME -->
+
+                <div class="task-form-group">
+
+                    <label for="taskDueTime">
+                        Due time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="taskDueTime"
+                        name="dueTime"
+                    >
+
+                </div>
+
+
+
+                <!-- REMINDER -->
+
+                <div class="task-form-group">
+
+                    <label for="taskReminder">
+                        Reminder
+                    </label>
+
+                    <select
+                        id="taskReminder"
+                        name="reminder"
+                    >
+
+                        <option value="">
+                            Set reminder
+                        </option>
+
+                        <option value="5 minutes">
+                            5 minutes before
+                        </option>
+
+                        <option value="15 minutes">
+                            15 minutes before
+                        </option>
+
+                        <option value="30 minutes">
+                            30 minutes before
+                        </option>
+
+                        <option value="1 hour">
+                            1 hour before
+                        </option>
+
+                        <option value="1 day">
+                            1 day before
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="task-form-group">
+
+                    <label for="taskDescription">
+
+                        Description
+
+                        <span>
+                            (optional)
+                        </span>
+
+                    </label>
+
+                    <textarea
+                        id="taskDescription"
+                        name="description"
+                        placeholder="Input here"
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- CREATE BUTTON -->
+
+                <button
+                    type="submit"
+                    class="create-task-button"
+                >
+
+                    + Create new task
+
+                </button>
+
+
+            </form>
+
         </div>
-    </body>
+
+    </div>
+
+
+
+    <!-- ========================================= -->
+    <!-- EDIT TASK MODAL -->
+    <!-- ========================================= -->
+
+    <div
+        class="task-modal-overlay"
+        id="editTaskModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="task-modal edit-task-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="editTaskModalTitle"
+        >
+
+            <div class="task-modal-title">
+
+                <h2 id="editTaskModalTitle">
+                    Edit Task
+                </h2>
+
+
+                <button
+                    type="button"
+                    class="close-task-modal"
+                    id="closeEditTaskModal"
+                    aria-label="Close"
+                >
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+
+            <!-- EDIT TASK FORM -->
+
+            <form id="editTaskForm">
+
+
+                <!-- TASK TITLE -->
+
+                <div class="task-form-group">
+
+                    <label for="editTaskTitle">
+                        Task title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editTaskTitle"
+                        name="title"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CATEGORY -->
+
+                <div class="task-form-group">
+
+                    <label for="editTaskCategory">
+                        Category
+                    </label>
+
+                    <select
+                        id="editTaskCategory"
+                        name="category"
+                        required
+                    >
+
+                        <option value="Study">
+                            Study
+                        </option>
+
+                        <option value="Assignment">
+                            Assignment
+                        </option>
+
+                        <option value="Quiz">
+                            Quiz
+                        </option>
+
+                        <option value="Customize">
+                            Customize
+                        </option>
+
+                    </select>
+
+
+                    <input
+                        type="text"
+                        id="editCustomCategory"
+                        name="editCustomCategory"
+                        placeholder="Type your own category..."
+                        style="display: none;"
+                    >
+
+                </div>
+
+
+
+                <!-- DUE DATE -->
+
+                <div class="task-form-group">
+
+                    <label for="editTaskDueDate">
+                        Due date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="editTaskDueDate"
+                        name="dueDate"
+                    >
+
+                </div>
+
+
+
+                <!-- DUE TIME -->
+
+                <div class="task-form-group">
+
+                    <label for="editTaskDueTime">
+                        Due time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="editTaskDueTime"
+                        name="dueTime"
+                    >
+
+                </div>
+
+
+
+                <!-- REMINDER -->
+
+                <div class="task-form-group">
+
+                    <label for="editTaskReminder">
+                        Remind me
+                    </label>
+
+                    <select
+                        id="editTaskReminder"
+                        name="reminder"
+                    >
+
+                        <option value="">
+                            No reminder
+                        </option>
+
+                        <option value="5 minutes">
+                            5 minutes before
+                        </option>
+
+                        <option value="15 minutes">
+                            15 minutes before
+                        </option>
+
+                        <option value="30 minutes">
+                            30 minutes before
+                        </option>
+
+                        <option value="1 hour">
+                            1 hour before
+                        </option>
+
+                        <option value="1 day">
+                            1 day before
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="task-form-group">
+
+                    <label for="editTaskDescription">
+
+                        Description
+
+                        <span>
+                            (optional)
+                        </span>
+
+                    </label>
+
+                    <textarea
+                        id="editTaskDescription"
+                        name="description"
+                        placeholder="Add more details about this task..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- SAVE CHANGES -->
+
+                <button
+                    type="submit"
+                    class="create-task-button"
+                >
+
+                    Save changes
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================= -->
+
+    <script src="../../functions/tasks/tasks.js"></script>
+
+
+</body>
+
 </html>

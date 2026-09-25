@@ -57,21 +57,23 @@ a {
 
 .login-card {
     width: min(100%, 440px);
-    padding: 22px 32px 26px;
+    padding: 26px 32px 26px;
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 10px 24px rgba(75, 115, 145, 0.16);
 }
 
 .login-card h2 {
-    margin: -48px 0 18px;
+    margin: 0 0 18px;
     font-size: 31px;
+    line-height: 1.2;
     text-align: center;
 }
 
-.login-title{
-    margin: -48px 0 18px;
+.login-title {
+    margin: 0 0 18px;
     font-size: 29px;
+    line-height: 1.2;
     text-align: center;
 }
 
